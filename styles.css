@@ -265,25 +265,25 @@ span:nth-child(12)::after {
     background-color: black;
     border-radius: 10px;
     transform-origin: bottom;
-    /* z-index: 1;
-  clip-path: polygon(50% 15%, 0% 100%, 100% 100%); */
+
+  clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
   }
 
   .minute-hand {
     position: absolute;
-    top: 15%;
+    top: 18%;
     bottom: 50%;
     left: 50%;
     width: 10px;
     transform-origin: bottom;
     background-color: black;
-    border-radius: 10px;
+    border-radius: 50%;
     /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
   }
 
   .seconds-hand {
     position: absolute;
-    top: 18%;
+    top: 15%;
     bottom: 50%;
     left: 50%;
     width: 10px;
@@ -297,10 +297,10 @@ span:nth-child(12)::after {
   .center {
     position: absolute;
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    width: 2em;
-    height: 2em;
+    top: 47%;
+    left: 46%;
+    width: 2.5em;
+    height: 2.5em;
     background: white;
     z-index: 2;
 
