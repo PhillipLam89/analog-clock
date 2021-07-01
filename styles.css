@@ -30,7 +30,6 @@ main > div {
   /* border: 15px solid forestgreen;
   border-radius: 50%; */
 }
-
 span {
   position: absolute;
   transform-origin: 50% 50%;
@@ -44,14 +43,14 @@ span {
   position: absolute;
   bottom: 50%;
   left: 50%;
-  top: 20%;
+  top: 25%;
   width: 20px;
   /* height: 150px; */
-  background-color: red;
+  background-color: black;
   border-radius: 10px;
   transform-origin: bottom;
-  z-index: 1;
-  clip-path: polygon(50% 15%, 0% 100%, 100% 100%);
+  /* z-index: 1;
+  clip-path: polygon(50% 15%, 0% 100%, 100% 100%); */
 }
 .minute-hand {
   position: absolute;
@@ -60,9 +59,9 @@ span {
   left: 50%;
   width: 20px;
   transform-origin: bottom;
-  background-color: green;
+  background-color: black;
   border-radius: 10px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
 }
 .seconds-hand {
   position: absolute;
@@ -71,7 +70,7 @@ span {
   left: 50%;
   width: 15px;
   transform-origin: bottom;
-  background: black;
+  background: red;
   border-radius: 10px;
   transition: 1s infinite;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -111,6 +110,8 @@ span:nth-child(2)::after {
   color: royalblue;
   display: block;
   transform: rotate(-60deg);
+
+
 }
 
 span:nth-child(3) {
