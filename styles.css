@@ -1,0 +1,131 @@
+
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: lightcyan;
+}
+main {
+  border: 12px solid blue;
+  height: inherit;
+}
+
+
+main > div {
+  display: grid;
+  place-items: center;
+  width: auto;
+  height: 100%;
+  position: relative;
+
+}
+
+span {
+  position: absolute;
+  transform-origin: 50% 50%;
+  height: 80vh;
+  font-size: 1.5rem;
+  font-weight: bolder;
+
+}
+
+section {
+  width: 15px;
+  height: 25%;
+  background-color: red;
+  border: 3px solid black;
+  transform: translateY(-85%);
+  border-radius: 10px;
+}
+
+span:nth-child(1) {
+  transform: rotate(30deg);
+}
+
+span:nth-child(1)::after {
+  content: '1';
+  color: red;
+  display: block;
+  transform: rotate(-30deg);
+}
+
+
+
+span:nth-child(2) {
+  transform: rotate(60deg);
+}
+span:nth-child(2)::after {
+  content: '2';
+  color: red;
+  display: block;
+  transform: rotate(-60deg);
+}
+
+span:nth-child(3) {
+  transform: rotate(90deg);
+  color:blue;
+}
+
+span:nth-child(3)::after{
+  content: '3';
+  color: red;
+  display: block;
+  transform: rotate(-90deg);
+}
+
+
+
+span:nth-child(4) {
+  transform: rotate(120deg);
+}
+span:nth-child(4)::after {
+  content: '4';
+  color: red;
+  display: block;
+  transform: rotate(-120deg);
+}
+span:nth-child(5) {
+  transform: rotate(150deg);
+}
+span:nth-child(5)::after {
+  content: '5';
+  color: red;
+  display: block;
+  transform: rotate(-150deg);
+}
+span:nth-child(6) {
+  transform: rotate(180deg);
+}
+span:nth-child(6)::after {
+  content: '6';
+  color: red;
+  display: block;
+  transform: rotate(-180deg);
+}
+span:nth-child(7) {
+  transform: rotate(210deg);
+}
+span:nth-child(7)::after {
+  content: '7';
+  color: red;
+  display: block;
+  transform: rotate(-210deg);
+}
+span:nth-child(8) {
+  transform: rotate(240deg);
+}
+
+span:nth-child(9) {
+  transform: rotate(270deg);
+}
+
+span:nth-child(10) {
+  transform: rotate(300deg);
+}
+
+span:nth-child(11) {
+  transform: rotate(330deg);
+}
