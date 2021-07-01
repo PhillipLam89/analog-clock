@@ -44,7 +44,7 @@ span {
   position: absolute;
   bottom: 50%;
   left: 50%;
-  top: 17%;
+  top: 20%;
   width: 20px;
   /* height: 150px; */
   background-color: red;
@@ -62,7 +62,6 @@ span {
   transform-origin: bottom;
   background-color: green;
   border-radius: 10px;
-  transform: rotate(61deg);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .seconds-hand {
@@ -74,7 +73,7 @@ span {
   transform-origin: bottom;
   background: black;
   border-radius: 10px;
-
+  transition: 1s infinite;
 }
 
 span {
