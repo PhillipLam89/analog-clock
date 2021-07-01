@@ -33,15 +33,41 @@ span {
 
 }
 
-section {
+.hour-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  top: 17%;
   width: 15px;
-  height: 22%;
+  /* height: 150px; */
   background-color: red;
-  border: 3px solid black;
-  transform: translateY(-85%);
   border-radius: 10px;
-
+  transform-origin: bottom;
+  z-index: 1;
 }
+.minute-hand {
+  position: absolute;
+  top: 25%;
+  bottom: 50%;
+  left: 50%;
+  width: 15px;
+  transform-origin: bottom;
+  background-color: green;
+  border-radius: 10px;
+  transform: rotate(61deg);
+}
+.seconds-hand {
+  position: absolute;
+  top: 14%;
+  bottom: 50%;
+  left: 50%;
+  width: 5px;
+  transform-origin: bottom;
+  background-color: black;
+  border-radius: 10px;
+  transform: rotate(61deg);
+}
+
 span {
   font-size: 2rem;
 }
