@@ -16,9 +16,11 @@ h3 {
   width: 100%;
   text-align: center;
 }
+
 main {
   height: inherit;
-  transform: scale(0.75);
+  width: auto;
+
 }
 
 
@@ -27,9 +29,10 @@ main > div {
   place-items: center;
   min-width: 500px;
   height: 100%;
-  position: relative;
+  /* position: relative; */
   /* border: 15px solid forestgreen;
   border-radius: 50%; */
+   transform: scale(0.75);
 }
 span {
   position: absolute;
@@ -39,7 +42,16 @@ span {
   font-weight: bolder;
 
 }
+.clock-container {
+  position: relative;
 
+}
+.hands-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
 .hour-hand {
   position: absolute;
   bottom: 50%;
@@ -55,7 +67,7 @@ span {
 }
 .minute-hand {
   position: absolute;
-  top: 15%;
+  top: 20%;
   bottom: 50%;
   left: 50%;
   width: 20px;
@@ -66,7 +78,7 @@ span {
 }
 .seconds-hand {
   position: absolute;
-  top: 12%;
+  top: 18%;
   bottom: 50%;
   left: 50%;
   width: 15px;
@@ -78,11 +90,11 @@ span {
 }
 .center {
     position: absolute;
-    border-radius: 10px;
+    border-radius: 50%;
     top: 48.5%;
     left: 50%;
-    width: 25px;
-    height: 25px;
+    width: 2em;
+    height: 2em;
     background: white;
     z-index: 2;
     transform: scale(1.2);
@@ -101,7 +113,12 @@ span:nth-child(1)::after {
   transform: rotate(-30deg);
 }
 
-
+section {
+ position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
 
 span:nth-child(2) {
   transform: rotate(60deg);
@@ -223,5 +240,69 @@ span:nth-child(12)::after {
 
   100% {
     opacity: 1;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(187, 250, 175);
+    transform: scale(.6);
+  }
+  .hands-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  .hour-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    top: 28%;
+    width: 10px;
+    /* height: 150px; */
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+    /* z-index: 1;
+  clip-path: polygon(50% 15%, 0% 100%, 100% 100%); */
+  }
+
+  .minute-hand {
+    position: absolute;
+    top: 15%;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    transform-origin: bottom;
+    background-color: black;
+    border-radius: 10px;
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+  }
+
+  .seconds-hand {
+    position: absolute;
+    top: 18%;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    transform-origin: bottom;
+    background: red;
+    border-radius: 10px;
+    transition: 1s infinite;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .center {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 2em;
+    background: white;
+    z-index: 2;
+
   }
 }

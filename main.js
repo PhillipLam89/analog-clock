@@ -6,8 +6,7 @@ const minuteHand = document.querySelector('.minute-hand')
 const hourHand = document.querySelector('.hour-hand')
 const digitalCurrentTime = document.querySelector('h3')
 
-const body = document.querySelector('body')
-body.style.animation = `fadeIn 1.5s`
+
 
 function getCurrentTime(date) {
   let hours = date.getHours();
@@ -45,4 +44,4 @@ function getCurrentTime(date) {
 
 setInterval(function() {
   digitalCurrentTime.textContent = `Current Time: ${getCurrentTime(new Date)}`
-},1000) //calling getCurrentTime will initiate all CSS animations based on current  Pacific Time, USA
+},1) //calling getCurrentTime will initiate all CSS animations based on current  Pacific Time, USA
