@@ -6,38 +6,43 @@ const minuteHand = document.querySelector('.minute-hand')
 const hourHand = document.querySelector('.hour-hand')
 const digitalCurrentTime = document.querySelector('h3')
 
+const body = document.querySelector('body')
+body.style.animation = `fadeIn 1.5s`
 
 function getCurrentTime(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let currentSeconds = new Date;
   seconds = Number(currentSeconds.getSeconds())
-  secondsHand.style.transform = `rotate(${seconds*6}deg)`
+
+
+  secondsHand.style.transform = `rotate(${seconds*6}deg)` //seconds hand moves 60 times for each full 360 deg rotation. Therefore it moves 360/60 = 6 deg per second;
   const ampm = hours >= 12 ? 'P.M.' : 'A.M.';
 
   hours = hours % 12;
   hours = hours ? hours : 12;
   hours = Number(hours)
 
-  hourHand.style.transform = `rotate(${hours*30}deg)`
-  minuteHand.style.transform = `rotate(${minutes*6}deg)`
-  minutes = minutes < 10 ? '0'+minutes : minutes;
+
+    hourHand.style.transform = `rotate(${(hours * 30) + (minutes * 0.5)}deg)`
+  //the hour hand moves only 30deg total per 60 elapsed minutes (such as the red hand moving from 1pm to 2pm), so it moves 0.5deg/min
+  // This means for each hour passed, the hour hand moves 30 deg (out of 360deg). The formula above takes this into account
+
+
+  minuteHand.style.transform = `rotate(${minutes * 6}deg)`
+  //the minute hand moves 60 times per full 360deg rotation so it moves 360/60 =  6 deg per min
+
+
+  minutes = minutes < 10 ? '0'+ minutes : minutes; //using string 0 will make JS auto concatenate with number types
 
 
   const strTime = hours + ':' + minutes + ' ' + ': ' + seconds + ' ' + ampm;
 
-  // if (minutes >= 59 && seconds >= 59) {
-  //   hourHand.style.transform = `rotate(${hours*6}deg)`
-  // }
-
   return strTime;
 }
-// console.log(getCurrentTime(new Date));
-// console.log('current seconds', seconds)
 
 
 
 setInterval(function() {
   digitalCurrentTime.textContent = `Current Time: ${getCurrentTime(new Date)}`
-  console.log(digitalCurrentTime.textContent.slice(17,19))
-},1000)
+},1000) //calling getCurrentTime will initiate all CSS animations based on current  Pacific Time, USA
