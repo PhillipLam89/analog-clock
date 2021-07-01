@@ -7,9 +7,16 @@
 body {
   height: 100vh;
   background: goldenrod;
+  position: relative;
+}
+
+h3 {
+  position: absolute;
+  top: 3%;
+  width: 100%;
+  text-align: center;
 }
 main {
-
   height: inherit;
 }
 
@@ -38,23 +45,25 @@ span {
   bottom: 50%;
   left: 50%;
   top: 17%;
-  width: 15px;
+  width: 20px;
   /* height: 150px; */
   background-color: red;
   border-radius: 10px;
   transform-origin: bottom;
   z-index: 1;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .minute-hand {
   position: absolute;
-  top: 25%;
+  top: 13%;
   bottom: 50%;
   left: 50%;
-  width: 15px;
+  width: 20px;
   transform-origin: bottom;
   background-color: green;
   border-radius: 10px;
   transform: rotate(61deg);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .seconds-hand {
   position: absolute;
@@ -63,9 +72,9 @@ span {
   left: 50%;
   width: 5px;
   transform-origin: bottom;
-  background-color: black;
+  background: black;
   border-radius: 10px;
-  transform: rotate(61deg);
+
 }
 
 span {
