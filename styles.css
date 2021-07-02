@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  background: goldenrod;
+  background: rgb(226, 208, 163);
   position: relative;
 }
 h3 {
@@ -36,11 +36,6 @@ main > div {
   min-width: 500px;
   height: 100%;
   transform: scale(0.75);
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 3px #cc6e6e,
-    inset 0 0 10px black,
-    0 0 10px rgba(248, 4, 4, 0.2);
-
    border-radius: 100px;
 
 }
@@ -68,7 +63,7 @@ span {
   position: absolute;
   bottom: 50%;
   left: 50%;
-  top: 25%;
+  top: 29%;
   width: 20px;
   background-color: black;
   border-radius: 10px;
@@ -232,10 +227,30 @@ span:nth-child(12)::after {
   display: block;
 }
 
+
+.border {
+  border: 12px solid rgb(0, 255, 157);
+  border-radius: 50%;
+  border-style: ridge;
+  width: 220px;
+  transform: translate(50%,-50%);
+  transform: scale(1);
+  margin: 1rem -6rem;
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 131px #141313,
+        inset 0 0 101px black,
+        0 0 110px rgba(0, 0, 0, 0.2);
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: rgb(187, 250, 175);
     transform: scale(.6);
+
+  }
+  .border {
+    width: 275px;
+    margin: 1rem -7.2rem;
   }
   .hands-container {
     position: absolute;
@@ -258,7 +273,7 @@ span:nth-child(12)::after {
     position: absolute;
     bottom: 50%;
     left: 50%;
-    top: 17%;
+    top: 27%;
     width: 10px;
     /* height: 150px; */
     background-color: black;

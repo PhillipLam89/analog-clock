@@ -1,6 +1,8 @@
 
 const clockNumbers = document.querySelectorAll('span')
-for (let val of clockNumbers) val.textContent = ''
+for (let val of clockNumbers) {
+  val.innerHTML = '<div class="border"></h1>'
+}
 const secondsHand = document.querySelector('.seconds-hand')
 const minuteHand = document.querySelector('.minute-hand')
 const hourHand = document.querySelector('.hour-hand')
