@@ -7,7 +7,6 @@ const hourHand = document.querySelector('.hour-hand')
 const digitalCurrentTime = document.querySelector('h3')
 
 
-
 function getCurrentTime(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -16,7 +15,7 @@ function getCurrentTime(date) {
 
 
   secondsHand.style.transform = `rotate(${seconds*6}deg)` //seconds hand moves 60 times for each full 360 deg rotation. Therefore it moves 360/60 = 6 deg per second;
-  const ampm = hours >= 12 ? 'P.M.' : 'A.M.';
+  const ampm = hours >= 12 ? 'P.M' : 'A.M';
 
   hours = hours % 12;
   hours = hours ? hours : 12;
@@ -39,7 +38,6 @@ function getCurrentTime(date) {
 
   return strTime;
 }
-
 
 
 setInterval(function() {
