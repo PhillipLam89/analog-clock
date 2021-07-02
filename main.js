@@ -43,5 +43,5 @@ function getCurrentTime(date) {
 
 
 setInterval(function() {
-  digitalCurrentTime.textContent = `Current Time: ${getCurrentTime(new Date)}`
+  digitalCurrentTime.textContent = `⏰ ${getCurrentTime(new Date)}`
 },1) //calling getCurrentTime will initiate all CSS animations based on current  Pacific Time, USA
