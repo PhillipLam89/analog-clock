@@ -249,8 +249,8 @@ span:nth-child(12)::after {
 
   }
   .border {
-    width: 5em;
-    margin: 1rem -8.5rem;
+    width: 28.125rem;
+    margin: 1rem -14rem;
   }
   .hands-container {
     position: absolute;
