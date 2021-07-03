@@ -24,7 +24,7 @@ h3 {
 
 }
 .seconds-counter {
-  color: rgb(238, 176, 82);
+  color: red;
   font-size: inherit;
 }
 small {
@@ -261,10 +261,15 @@ span:nth-child(12)::after {
     width: 28.125rem;
     margin: 1rem -14rem;
   }
+
   .hands-container {
     position: absolute;
     top: 0;
     bottom: 0;
+  }
+  .seconds-counter {
+    color: rgb(238, 176, 82);
+
   }
   main > div {
     box-shadow: unset;
