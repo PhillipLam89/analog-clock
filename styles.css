@@ -5,10 +5,16 @@
 }
 
 body {
-  height: 100vh;
+  height: 80vh;
   background: rgb(226, 208, 163);
   position: relative;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin: 2rem 10vw;
 }
 h3 {
   position: absolute;
@@ -254,7 +260,9 @@ span:nth-child(12)::after {
 @media only screen and (max-width: 600px) {
   body {
     background-color: rgb(203, 77, 235);
-    transform: scale(0.7);
+    transform: scale(0.65);
+    box-shadow: unset;
+    margin: unset;
 
   }
   .border {
@@ -268,14 +276,12 @@ span:nth-child(12)::after {
     bottom: 0;
   }
   .seconds-counter {
-    color: rgb(238, 176, 82);
-
+    color: white
   }
   main > div {
     box-shadow: unset;
   }
   h2 {
-
 
     position: absolute;
     left: 15%;
