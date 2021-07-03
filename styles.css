@@ -129,6 +129,10 @@ span:nth-child(1)::after {
   color: royalblue;
   display: block;
   transform: rotate(-30deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 section {
@@ -146,7 +150,10 @@ span:nth-child(2)::after {
   color: royalblue;
   display: block;
   transform: rotate(-60deg);
-
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
 
@@ -160,6 +167,10 @@ span:nth-child(3)::after{
   color: royalblue;
   display: block;
   transform: rotate(-90deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 
@@ -172,6 +183,10 @@ span:nth-child(4)::after {
   color: royalblue;
   display: block;
   transform: rotate(-120deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 span:nth-child(5) {
   transform: rotate(150deg);
@@ -180,6 +195,10 @@ span:nth-child(5)::after {
   content: '5';
   color: royalblue;
   display: block;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transform: rotate(-150deg);
 }
 span:nth-child(6) {
@@ -190,6 +209,10 @@ span:nth-child(6)::after {
   color: royalblue;
   display: block;
   transform: rotate(-180deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 span:nth-child(7) {
   transform: rotate(210deg);
@@ -199,6 +222,10 @@ span:nth-child(7)::after {
   color: royalblue;
   display: block;
   transform: rotate(-210deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 span:nth-child(8) {
   transform: rotate(240deg);
@@ -208,6 +235,10 @@ span:nth-child(8)::after {
   color: royalblue;
   display: block;
   transform: rotate(-240deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 span:nth-child(9) {
   transform: rotate(270deg);
@@ -217,6 +248,10 @@ span:nth-child(9)::after {
   color: royalblue;
   display: block;
   transform: rotate(-270deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 span:nth-child(10) {
   transform: rotate(300deg);
@@ -226,6 +261,10 @@ span:nth-child(10)::after {
   color: royalblue;
   display: block;
   transform: rotate(-300deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 span:nth-child(11) {
   transform: rotate(330deg);
@@ -235,11 +274,19 @@ span:nth-child(11)::after {
   color: royalblue;
   display: block;
   transform: rotate(-330deg);
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 span:nth-child(12)::after {
   content: '12';
   color: royalblue;
   display: block;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 
@@ -251,15 +298,15 @@ span:nth-child(12)::after {
   transform: translate(50%,-50%);
   transform: scale(1);
   margin: 1rem -6rem;
-        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1),
-        inset 0 0 0 131px #141313,
-        inset 0 0 101px black,
-        0 0 110px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1),
+  inset 0 0 0 131px #141313,
+  inset 0 0 101px black,
+  0 0 110px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: rgb(203, 77, 235);
+    background-color: rgb(238, 224, 178);
     transform: scale(0.65);
     box-shadow: unset;
     margin: unset;
@@ -268,6 +315,8 @@ span:nth-child(12)::after {
   .border {
     width: 28.125rem;
     margin: 1rem -14rem;
+
+
   }
 
   .hands-container {
@@ -276,11 +325,12 @@ span:nth-child(12)::after {
     bottom: 0;
   }
   .seconds-counter {
-    color: white
+    color:royalblue
   }
   main > div {
     box-shadow: unset;
   }
+
   h2 {
 
     position: absolute;
@@ -341,4 +391,5 @@ span:nth-child(12)::after {
     z-index: 2;
 
   }
+
 }
