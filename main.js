@@ -18,7 +18,6 @@ function getCurrentTime(date) {
 
   secondsHand.style.transform = `rotate(${seconds*6}deg)` //seconds hand moves 60 times for each full 360 deg rotation. Therefore it moves 360/60 = 6 deg per second;
   const ampm = hours >= 12 ? 'P.M' : 'A.M';
-
   hours = hours % 12;
   hours = hours ? hours : 12;
   hours = Number(hours)
@@ -34,14 +33,15 @@ function getCurrentTime(date) {
 
 
   minutes = minutes < 10 ? '0'+ minutes : minutes; //using string 0 will make JS auto concatenate with number types
+  seconds = seconds < 10 ? '0'+ seconds : seconds;
 
-
-  const strTime = hours + ':' + minutes + ' ' + ': ' + seconds + ' ' + ampm;
-
+  // const strTime = hours + ':' + minutes + ' ' + ': ' + seconds + ' ' + ampm;
+  const strTime = `<h2>${hours}:${minutes}: <a class="seconds-counter">${seconds}</a>  ${ampm}</h2>`
   return strTime;
 }
 
 
 setInterval(function() {
-  digitalCurrentTime.textContent = `⏰ ${getCurrentTime(new Date)}`
+  // digitalCurrentTime.textContent = `⏰ ${getCurrentTime(new Date)}`
+  digitalCurrentTime.innerHTML = `${getCurrentTime(new Date)}`
 },1) //calling getCurrentTime will initiate all CSS animations based on current  Pacific Time, USA
